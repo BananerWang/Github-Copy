@@ -3,8 +3,434 @@
 <head>
     <meta charset="UTF-8">
     <title>About Github</title>
+    <style type="text/css">
+        body{
+            padding: 0;
+            margin: 0;
+            min-width: 1299px;
+            height: 100%;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        a:visited{
+
+        }
+        hr{
+            color: #e1e4e8;
+            width: 90%;
+
+        }
+        .header-wrapper{
+            background-color: #000000;
+        }
+        .header-wrapper a:visited{
+            color: white;
+        }
+        #list{
+            float: left;
+        }
+        #icon{
+            background-color: white; height: 40px ; width: 40px; border-radius: 40px; float: left; margin-left: 60px;
+            margin-top: 15px; margin-right: 20px
+        }
+        #feat-sublist{
+            position: absolute;
+            display: none;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,3);
+            border-radius: 3px;
+            left: 20px;
+            top: 36px;
+            font-size: 12px;
+        }
+        #feat-sublist a{
+            color: #777777;
+        }
+        #feat-sublist a:hover{
+            color: cornflowerblue;
+        }
+        .why-github{
+            position: relative;
+        }
+        li:hover > #feat-sublist{
+            display: block;
+        }
+        nav li{
+            float: left;
+            line-height: 35px;
+            list-style-type: none;
+        }
+        nav a{
+            /*display: block;*/
+            padding: 0 25px;
+            text-decoration: none;
+
+        }
+        nav li ul li{
+            float: none;
+            width: 300px;
+            margin-left: -39px;
+        }
+        nav li ul {
+            margin-top: 20px;
+            margin-left: 14px;
+        }
+        .search{
+            float: right;
+            width: 300px;
+            height: 30px;
+            position: absolute;
+            left: 1350px;
+        }
+        .login{
+            float: right;
+            margin-right: 70px;
+            padding:0;
+            height: 50.67px;
+        }
+        .login li{
+            float: left;
+            list-style: none;
+            height: 34.67px;
+            line-height: 34.67px;;
+            padding-left: 10px;
+
+        }
+
+        .search input{
+            display: block;
+            float: right;
+            height: 30px;
+            width: 300px;
+            margin-top: 20px;
+            background-color: white;
+            padding: 0;
+            border-radius: 3px;
+            border: none;
+        }
+
+        .container-main{
+            margin: 0 auto;
+            text-align: center;
+        }
+        .container-main span{
+            display: inline;
+            margin: 0 auto;
+        }
+        .medium-container{
+            width: 1000px;
+            margin: 0 auto;
+            height: 170px;
+            text-align: center;
+            position: relative;
+        }
+        .medium-container-blank{
+            display: flex;
+
+            left: 640px;
+
+        }
+        .medium-container-blank h3{
+            margin-top: 30px;
+            margin-bottom: 3px;
+        }
+        .medium-container-blank div{
+            width: 290px;
+            height: 120px;
+            border-top:1px #e1e4e8 solid;
+            border-bottom:1px #e1e4e8 solid;
+            border-left: 1px #e1e4e8 solid ;
+            border-right: 1px #e1e4e8 solid ;
+            border-radius: 2px;
+            margin-top: 70px;
+            
+        }
+        .medium-container-blank :first-of-type{
+
+            border-right: 0px;
+        }
+
+        .medium-container-blank :last-of-type{
+
+            border-left: 0px;
+        }
+
+        .medium-container-text-1{
+
+            left: 995px;
+            top:200px;
+            font-size: 10px;
+
+        }
+        .medium-container-text-2{
+
+            left: 730px;
+            top:250px;
+        }
+        .container-main{
+            margin-top: 100px;
+        }
+
+        .bottom-container{
+            max-width: 1012px;
+            max-height: 456px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .bottom-container div{
+            width: 490px;
+            height: 88px;
+        }
+        .text-center{
+
+            text-align: center;
+            font-size: 14px;
+            color: cornflowerblue;
+            margin-top: 48px;
+        }
+        .text-center a {
+
+            border: cornflowerblue 1px solid;
+            border-radius: 3px;
+            width: 240px;
+            padding: 16px 24px;
+            text-align: center;
+
+        }
+        .text-center a:visited{
+            color: cornflowerblue;
+        }
+
+        .text-center img{
+
+            vertical-align: middle;
+        }
+        .bottom-container h3{
+            margin-bottom: 4px;
+        }
+        .bottom-container div{
+            margin-bottom: 10px;
+        }
+        .footer-wrap li{
+            list-style: none;
+        }
+        .footer-wrap div{
+            float: left;
+        }
+
+        .footer-wrap{
+            width: 1000px;
+
+            margin: 50px auto;
+
+        }
+
+        .footer-wrap li{
+            line-height: 25px;
+            font-size: 13px;
+        }
+
+        .col-6{
+            width: 16.666%;
+        }
+
+        .col-3{
+            width: 33.33%;
+        }
+
+
+    </style>
 </head>
+
 <body>
-<div id="header"></div>
+
+<div class="header-wrapper " style="background-color: black; height: 70px; margin: 0px">
+
+    <div id="icon" style=" ">
+        <img src="github-b.svg" height="40px" width="40px" alt="">
+    </div>
+
+    <div id="list" style="color:white; float: left; ">
+        <nav>
+            <ul>
+                <li class="why-github">
+                    <a href="">Why Github>?</a>
+                    <div id="feat-sublist">
+                        <ul style="color: black ;">
+                            <li><a style="font-weight: bold">Features</a> </li>
+                            <li><a href="">Code review</a></li>
+                            <li><a href="">Project Management</a></li>
+                            <li><a href="">Integration</a></li>
+                            <li><a href="">Actions</a></li>
+                            <li><a href="">Packages </a></li>
+                            <li><a href=""> Security</a></li>
+                            <li><a href="">Team management</a> </li>
+                            <li><a href="">Hosting </a></li>
+                            <hr style="margin-left: -12px; ">
+                        </ul>
+                        <ul style="margin-top: -7px; ">
+                            <li><a href="" style="font-weight: bold">Customer Stories</a></li>
+                            <li><a href="" style="font-weight: bold">Security</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li style=""><a href="">Team</a></li>
+                <li><a href="">Enterprise </a></li>
+                <li><a href="">Explore</a></li>
+                <li><a href="">Marketplace </a></li>
+                <li><a href="">Pricing</a></li>
+                </ul>
+        </nav>
+    </div>
+
+    <div class="search">
+        <input type="text" class="search_input" placeholder="Search Github"/>
+    </div>
+    <div class="login">
+        <ul>
+            <li><a href="">Sign in</a> </li>
+            <li><a href="">Sign up</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<main>
+    <div id="application-main">
+
+        <div class="container-main">
+            <span style="font-size: 40px; font-weight: bold" >GitHub</span> <span style="font-size: 40px">is how people build software</span> <br>
+            <span style="display: block; margin-top: 50px; width: 700px; font-size: 16px">We're supporting a community where more than 50 million people learn share and work together to
+    build software</span>
+        </div>
+
+
+        <div class="medium-container">
+
+            <div class="medium-container-blank">
+                <div> <h3>October 2007</h3>
+                    <span style="font-size: 14px">First Commit</span>
+                </div>
+                <div> <h3>San Fransisco</h3>
+                    <span style="font-size: 14px">header quarters</span>
+                </div>
+
+                <div> <h3>100 million</h3> <span style="font-size: 14px">Repositories hosted</span>  </div>
+            </div>
+            <p class="medium-container-text-1">As of August 2019</p>
+            <p class="medium-container-text-2">We are working hard to build a supportive, welcoming place for user and GitHubbers alike</p>
+        </div>
+        <hr style="margin-top: 140px; color: #e1e4e8" color="#e1e4e8" width="1px">
+        <div class="bottom-container">
+            <div>
+                <h3>Careers</h3>
+                Come help us make collaboration even better. We've built a company we truly
+            </div>
+
+            <div>
+                <h3>Press</h3>
+                Developers from all around the world are building amazing things together
+            </div>
+            <div>
+                <h3>Blog</h3>
+                Learn about the latest company info, new features and general goings on github
+            </div>
+
+            <div>
+                <h3>LeaderShip</h3>
+                Meet the team leaders behind the world's leading software development platform
+            </div>
+            <div>
+                <h3>GitHub Status</h3>
+                We continuously monitor the status of GitHub.com and all its related services. If there are any
+                interruptions in service, a note will be posted here.
+            </div>
+
+            <div>
+                <h3>
+                    Milestones
+                </h3>
+                A timeline of significant moments in GitHub's history
+            </div>
+
+            <div>
+                <h3>Social Impact</h3>
+                Learn How GitHub's people, products,and platform are creating positive and lasting change around the world
+            </div>
+        </div>
+
+        <hr style="margin-top: 80px; " color="#e1e4e8">
+
+        <div class="text-center">
+            <a href="">
+                <img src="twitter.svg" width="32px" height="32px">
+                Follow us in twitter
+            </a>
+        </div>
+    </div>
+</main>
+
+<footer>
+
+    <div class="footer-wrap">
+        <div class="col-3">Github</div>
+        <div class="col-6">
+            <ul>
+                <li>Product</li>
+                <li>Features</li>
+                <li>Security</li>
+                <li>Team</li>
+                <li>Enterprise</li>
+                <li>Customer stories</li>
+                <li>Pricing</li>
+                <li>Resources</li>
+            </ul>
+        </div>
+
+        <div class="col-6">
+            <ul>
+                <li>Platform</li>
+                <li>Developer API</li>
+                <li>Partners</li>
+                <li>Atom</li>
+                <li>Electron</li>
+                <li>GitHub Desktop</li>
+            </ul>
+        </div>
+
+        <div class="col-6">
+            <ul>
+                <li>Support</li>
+                <li>Help</li>
+                <li>Community Forum</li>
+                <li>Professional Services</li>
+                <li>Learning Lab</li>
+                <li>Status</li>
+                <li> Contact GitHub</li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <ul>
+                <li>Company</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Careers</li>
+                <li>Press</li>
+                <li>Social Impact</li>
+                <li>Shop</li>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+
 </body>
+
+
+
 </html>
